@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.clienti">
+   <children>
+      <AnchorPane layoutX="-9.0" layoutY="-14.0" prefHeight="700.0" prefWidth="282.0" style="-fx-background-color: #272626;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Button fx:id="DashButton" layoutX="41.0" layoutY="310.0" mnemonicParsing="false" onAction="#ButtonAction" prefHeight="42.0" prefWidth="200.0" text="Dashbord" textAlignment="CENTER">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Separator layoutX="41.0" layoutY="215.0" prefWidth="200.0" />
+            <Button fx:id="clientiButton" layoutX="41.0" layoutY="369.0" mnemonicParsing="false" onAction="#ButtonAction" prefHeight="42.0" prefWidth="200.0" text="Clienti / Comenzi" textAlignment="CENTER">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="132.0" fitWidth="162.0" layoutX="62.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@logo%201.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="info_button" layoutX="41.0" layoutY="429.0" mnemonicParsing="false" onAction="#info_button_action" prefHeight="42.0" prefWidth="200.0" text="Informatii" textAlignment="CENTER">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <TableView fx:id="TabelClienti" layoutX="312.0" layoutY="63.0" onMouseClicked="#tabel_clicked" prefHeight="287.0" prefWidth="539.0" AnchorPane.bottomAnchor="350.0" AnchorPane.leftAnchor="312.0" AnchorPane.rightAnchor="349.0" AnchorPane.topAnchor="63.0">
+        <columns>
+          <TableColumn fx:id="id" minWidth="20.0" prefWidth="127.20001220703125" text="ID" />
+          <TableColumn fx:id="nume" prefWidth="193.60003662109375" text="Nume" />
+            <TableColumn fx:id="adresa" prefWidth="206.39996337890625" text="Adresa" />
+            <TableColumn fx:id="contact" prefWidth="243.20001220703125" text="Contact" />
+        </columns>
+      </TableView>
+      <TableView fx:id="TabelOferte" layoutX="312.0" layoutY="391.0" prefHeight="246.0" prefWidth="304.0" AnchorPane.bottomAnchor="63.0" AnchorPane.leftAnchor="312.0" AnchorPane.rightAnchor="584.0">
+         <columns>
+            <TableColumn fx:id="nr" prefWidth="75.0" text="Nr." />
+            <TableColumn fx:id="pret" prefWidth="114.4000244140625" text="Pret" />
+            <TableColumn fx:id="data" prefWidth="127.20001220703125" text="Data Livrare" />
+            <TableColumn fx:id="id_client" prefWidth="75.0" text="Id Client" />
+         </columns>
+      </TableView>
+      <MenuButton layoutX="312.0" layoutY="358.0" mnemonicParsing="false" text="Luna" AnchorPane.bottomAnchor="316.4" AnchorPane.leftAnchor="312.0">
+        <items>
+          <MenuItem mnemonicParsing="false" text="Action 1" />
+          <MenuItem mnemonicParsing="false" text="Action 2" />
+        </items>
+      </MenuButton>
+      <MenuButton layoutX="385.0" layoutY="358.0" mnemonicParsing="false" text="Anul" AnchorPane.bottomAnchor="316.4" AnchorPane.leftAnchor="385.0">
+         <items>
+            <MenuItem mnemonicParsing="false" text="Action 1" />
+            <MenuItem mnemonicParsing="false" text="Action 2" />
+         </items>
+      </MenuButton>
+      <VBox layoutX="947.0" layoutY="159.0" prefHeight="142.0" prefWidth="179.0" AnchorPane.bottomAnchor="399.0" AnchorPane.rightAnchor="74.0" AnchorPane.topAnchor="159.0">
+         <children>
+            <Button fx:id="AddClientButton" mnemonicParsing="false" onAction="#Add_client_Button" prefHeight="42.0" prefWidth="142.0" text="Adauga Client" textAlignment="CENTER">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="update_button" mnemonicParsing="false" onAction="#Update_button_action" prefHeight="42.0" prefWidth="142.0" text="Modifica Client">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="Sterge" mnemonicParsing="false" onAction="#StergeClient" prefHeight="42.0" prefWidth="142.0" text="Sterge client" textAlignment="CENTER">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+      <AnchorPane layoutX="616.0" layoutY="359.0" prefHeight="287.0" prefWidth="321.0" AnchorPane.bottomAnchor="54.0" AnchorPane.rightAnchor="263.0">
+         <children>
+            <TableView fx:id="achitari" layoutX="-4.0" layoutY="32.0" prefHeight="176.0" prefWidth="255.0" AnchorPane.leftAnchor="-4.0" AnchorPane.rightAnchor="70.0">
+               <columns>
+                  <TableColumn fx:id="data_achitare" prefWidth="113.0" text="Data" />
+                  <TableColumn fx:id="suma_achitare" minWidth="5.0" prefWidth="114.0" text="Suma" />
+               </columns>
+            </TableView>
+            <Label layoutX="86.0" layoutY="6.0" text="Plati Facturate" />
+            <Button fx:id="add_payment" layoutX="270.0" layoutY="70.0" mnemonicParsing="false" onAction="#add_payment_action" prefHeight="25.0" prefWidth="28.0" text="+" textFill="#26a110" AnchorPane.rightAnchor="23.0">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="delete_payment" layoutX="270.0" layoutY="95.0" mnemonicParsing="false" onAction="#delete_payment_action" prefHeight="25.0" prefWidth="28.0" text="-" textFill="#cd1717" AnchorPane.rightAnchor="23.0">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Label fx:id="total" layoutX="14.0" layoutY="228.0" text="Total" visible="false" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <TextField fx:id="search_bar" layoutX="535.0" layoutY="27.0" prefHeight="26.0" prefWidth="246.0" style="-fx-border-radius: 30;" AnchorPane.rightAnchor="419.0" AnchorPane.topAnchor="27.0" />
+      <Button fx:id="search_button" layoutX="781.0" layoutY="27.0" mnemonicParsing="false" onAction="#search_filter" prefHeight="26.0" prefWidth="70.0" text="Search" AnchorPane.rightAnchor="349.0" AnchorPane.topAnchor="27.0" />
+      <Button fx:id="add_offer" layoutX="464.0" layoutY="358.0" mnemonicParsing="false" onAction="#add_offer_action" prefHeight="25.0" prefWidth="28.0" text="+" textFill="#26a110" AnchorPane.bottomAnchor="317.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="delete_offer" layoutX="492.0" layoutY="358.0" mnemonicParsing="false" onAction="#Delete_offer_action" prefHeight="25.0" prefWidth="28.0" text="-" textFill="#cd1717" AnchorPane.bottomAnchor="317.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

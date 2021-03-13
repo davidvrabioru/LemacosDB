@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <AnchorPane prefHeight="700.0" prefWidth="282.0" style="-fx-background-color: #272626;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Separator layoutX="41.0" layoutY="215.0" prefWidth="200.0" />
+            <Button layoutX="41.0" layoutY="310.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="200.0" text="Dashbord" textAlignment="CENTER">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="clientiButton" layoutX="41.0" layoutY="369.0" mnemonicParsing="false" onAction="#ButtonAction" prefHeight="42.0" prefWidth="200.0" text="Clienti / Comenzi" textAlignment="CENTER">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="132.0" fitWidth="162.0" layoutX="62.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@logo%201.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="41.0" layoutY="429.0" mnemonicParsing="false" onAction="#info_button_action" prefHeight="42.0" prefWidth="200.0" text="Informatii" textAlignment="CENTER">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="MainPane" layoutX="281.0" prefHeight="700.0" prefWidth="918.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="283.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <DatePicker fx:id="first_date" layoutX="58.0" layoutY="22.0" />
+            <DatePicker fx:id="second_date" layoutX="289.0" layoutY="22.0" />
+            <LineChart fx:id="chart" layoutX="7.0" layoutY="55.0" prefHeight="519.0" prefWidth="438.0" title="Vanzari" AnchorPane.bottomAnchor="322.0" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="472.0" AnchorPane.topAnchor="55.0">
+              <xAxis>
+                <CategoryAxis fx:id="CategoryAxis" side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis fx:id="NumberAxis" side="LEFT" />
+              </yAxis>
+            </LineChart>
+            <AnchorPane layoutX="545.0" layoutY="55.0" prefHeight="239.0" prefWidth="404.0" style="-fx-background-color: #ffffff;" AnchorPane.rightAnchor="29.0" AnchorPane.topAnchor="55.0">
+               <children>
+                  <Label layoutX="70.0" layoutY="14.0" text="Performante" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="60.0" AnchorPane.topAnchor="14.0">
+                     <font>
+                        <Font name="System Bold" size="27.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="AvgPerOrd" layoutX="9.0" layoutY="89.0" prefHeight="26.0" prefWidth="282.0" text="Media pe comanda:" AnchorPane.leftAnchor="9.0" AnchorPane.topAnchor="89.0">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="nr_orders" layoutX="9.0" layoutY="136.0" prefHeight="26.0" prefWidth="282.0" text="Nr. Comenzi: 7" AnchorPane.leftAnchor="9.0" AnchorPane.rightAnchor="7.0" AnchorPane.topAnchor="136.0">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="9.0" layoutY="179.0" prefHeight="25.0" prefWidth="114.0" text="Target:">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <ProgressIndicator fx:id="bar21" layoutX="74.0" layoutY="172.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="47.0" prefWidth="43.0" progress="0.0" />
+               </children>
+            </AnchorPane>
+            <Label layoutX="45.0" layoutY="428.0" text="Vanzari: " AnchorPane.bottomAnchor="168.80000000000007">
+               <font>
+                  <Font name="System Bold" size="32.0" />
+               </font>
+            </Label>
+            <Label fx:id="sales" layoutX="175.0" layoutY="484.0" text="38 989 Eruo" textFill="#009688" AnchorPane.bottomAnchor="169.0">
+               <font>
+                  <Font name="System Bold" size="32.0" />
+               </font>
+            </Label>
+            <ProgressBar fx:id="bar" layoutX="46.0" layoutY="539.0" prefHeight="25.0" prefWidth="258.0" progress="0.54" AnchorPane.bottomAnchor="136.0" AnchorPane.leftAnchor="46.0" />
+            <ProgressIndicator fx:id="bar2" layoutX="304.0" layoutY="528.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="47.0" prefWidth="43.0" progress="0.0" AnchorPane.bottomAnchor="125.0" />
+            <Label layoutX="472.0" layoutY="484.0" text="Rate: " AnchorPane.bottomAnchor="169.0" AnchorPane.rightAnchor="360.0">
+               <font>
+                  <Font name="System Bold" size="32.0" />
+               </font>
+            </Label>
+            <Label fx:id="rate" layoutX="558.0" layoutY="484.0" text="38 989 Eruo" textFill="#009688" AnchorPane.bottomAnchor="169.0" AnchorPane.rightAnchor="180.0">
+               <font>
+                  <Font name="System Bold" size="32.0" />
+               </font>
+            </Label>
+            <Separator layoutX="373.0" layoutY="464.0" orientation="VERTICAL" prefHeight="200.0" style="-fx-background-color: #272626;" AnchorPane.bottomAnchor="36.0" AnchorPane.leftAnchor="373.0" />
+            <Separator layoutX="456.0" layoutY="464.0" orientation="VERTICAL" prefHeight="200.0" style="-fx-background-color: #272626;" AnchorPane.bottomAnchor="36.0" AnchorPane.rightAnchor="470.0" />
+            <BarChart fx:id="AvgOrderOnMonth" layoutX="579.0" layoutY="317.0" prefHeight="241.0" prefWidth="404.0" title="Medie Comanda pe Luna" AnchorPane.bottomAnchor="338.0" AnchorPane.rightAnchor="29.0" AnchorPane.topAnchor="317.0">
+              <xAxis>
+                <CategoryAxis side="BOTTOM" fx:id="x" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis fx:id="y" side="LEFT" />
+              </yAxis>
+            </BarChart>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.AddOffer">
+   <children>
+      <DatePicker fx:id="data" layoutX="228.0" layoutY="233.0" prefHeight="25.0" prefWidth="211.0" />
+      <Label layoutX="93.0" layoutY="143.0" text="1. Link">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="94.0" layoutY="188.0" text="2. Pret">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="link" layoutX="226.0" layoutY="145.0" prefHeight="25.0" prefWidth="211.0" />
+      <TextField fx:id="pret" layoutX="226.0" layoutY="190.0" prefHeight="25.0" prefWidth="211.0" />
+      <Button fx:id="push_data" layoutX="228.0" layoutY="305.0" mnemonicParsing="false" onAction="#adauga_oferta" prefHeight="55.0" prefWidth="211.0" text="Create">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <Label layoutX="93.0" layoutY="231.0" text="3. Data Livrare">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="tag" layoutX="228.0" layoutY="32.0" prefHeight="64.0" prefWidth="144.0" text="Adauga Oferta" textAlignment="JUSTIFY" textOverrun="CENTER_ELLIPSIS">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
